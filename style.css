@@ -90,3 +90,66 @@ button{
 .hero h3{
     padding: 2rem;
 }
+/* locations section */
+#locations{
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.8),transparent),url("/img/new-york-page.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    /* justify-content: center; */
+}
+.locations-head{
+width: 90%;
+margin: auto;
+
+}
+.locations-head h2{
+    padding: 1rem 0;
+    text-decoration: underline;
+}
+.locations-head h3{
+    padding: 4rem 0;
+}
+.cloud{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+.moving-cloud-1{
+    animation: cloudAnimations 10s infinite alternate ease-in-out ;
+}
+.moving-cloud-2{
+    top: 20%;
+    z-index: -1;
+    opacity: 0.5;
+}
+@keyframes cloudAnimations{
+    from{
+        transform: translate(10%,-10%);
+    }
+    to{
+        transform: translate(0%,0%);
+    }
+}
+
+@media screen and (max-width:932px){
+    nav{
+        text-align: center;
+
+    }
+    #logo{
+        padding: 2rem;
+    }
+    html{
+        font-size: 45%;
+    }
+}
+
+}
