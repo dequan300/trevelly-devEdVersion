@@ -43,6 +43,11 @@ button{
     font-size: 1.8rem;
 
 }
+button:hover{
+
+    animation: cloudMove 10s infinite alternate ease-in-out ;
+
+}
 
 /* nav sec */
 .main-head{
@@ -129,6 +134,8 @@ margin: auto;
     top: 20%;
     z-index: -1;
     opacity: 0.5;
+    animation: cloudAnimations 11s infinite alternate ease-in-out ;
+
 }
 @keyframes cloudAnimations{
     from{
@@ -137,6 +144,89 @@ margin: auto;
     to{
         transform: translate(0%,0%);
     }
+}
+@keyframes cloudMove{
+    25%{
+        transform: scale(2);
+        background-color: blue;
+    }
+    50%{
+        transform: scale(3);
+        background-color: coral;
+    }
+    100%{
+        transform: scale(4);
+        background-color: darkorchid;
+
+    }
+}
+#benifits{
+    background-color:#4c6e97;
+}
+.benifit-head{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black ;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+.cards{
+    display: flex;
+width: 90%;
+margin: auto;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.card{
+    flex: 1 1 25rem;
+    min-height: 40vh;
+    margin: 2rem 5rem;
+
+    text-align: center;
+    box-shadow: -3px -3px 20px rgb(43, 42, 42,0.8) ;
+    background-color: rgb(79, 97, 134) ;
+}
+
+.card-icon{
+background-color: rgb(134, 196, 247);}
+.card img {
+    max-width: 15%;
+    margin: 2rem;
+}
+
+/* contacts */
+#contacts{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),transparent),url("/img/contact-mountain.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.form-wrapper{
+    background-color: rgba(19,28,39,0.8);
+  border-radius: 20px;
+  width: 60%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+    
+}
+.form-header{
+    padding: 5rem;
 }
 
 @media screen and (max-width:932px){
@@ -150,6 +240,18 @@ margin: auto;
     html{
         font-size: 45%;
     }
+    .cloud{
+        height: 50rem;
+    }
+    .moving-cloud-1{
+        z-index: -1;
+    }
+    .moving-cloud-2{
+        z-index: -2;
+    }
+    .locations-head h3{
+        background-color: rgb(20, 17, 17,0.9);
+        color: white;
+    }
 }
 
-}
